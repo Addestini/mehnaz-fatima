@@ -456,7 +456,7 @@
   }
 
   async function saveToSheet(data){
-    if(!SHEET_URL||SHEET_URL==='YOUR_APPS_SCRIPT_URL_HERE')return;
+    if(!SHEET_URL||SHEET_URL==='https://script.google.com/macros/s/AKfycbwBz4jvqDZB5CwX2TbAsI31qHQM6KL2NRb5BWES1HgfhuXPH_qqoqQxTgSbwKhjWEzZ-Q/exec')return;
     const p='?timestamp='+encodeURIComponent(new Date().toLocaleString('en-IN'))+'&name='+encodeURIComponent(data.name)+'&phone='+encodeURIComponent(data.phone)+'&age='+encodeURIComponent(data.age)+'&gender='+encodeURIComponent(data.gender)+'&profession='+encodeURIComponent(data.profession)+'&source='+encodeURIComponent(data.source);
     const url=SHEET_URL+p;
     try{await fetch(url,{method:'GET',mode:'no-cors'});return;}catch(e){}
